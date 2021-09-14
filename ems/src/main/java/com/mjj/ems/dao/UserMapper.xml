@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mjj.ems.dao.UserMapper">
+
+    <select id="queryByUsername" resultType="com.mjj.ems.model.User">
+        select * from tbl_user where username = #{username}
+    </select>
+
+    <insert id="save" parameterType="com.mjj.ems.model.User">
+        insert into tbl_user(username,password) values (
+                #{usnername},
+                #{password}
+        )
+    </insert>
+
+</mapper>
+
+
+
